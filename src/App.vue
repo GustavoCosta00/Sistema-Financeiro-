@@ -69,7 +69,7 @@
   <main>
     <Balance :total="+total" />
     <Costs :expense="-expense" :income="+income" />
-    <History :transactions="itens" />
+    <History :transactions="itens" @transaction_delete="deletar"/>
     <New  @newTransaction="data" />
   </main>
 </template>

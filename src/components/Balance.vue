@@ -16,7 +16,7 @@
             YOUR BALANCE 
         </h2>
     
-        <p>$ {{ total }}</p>
+        <p>$ {{ total.total }}</p>
     </div>
 </template>
 

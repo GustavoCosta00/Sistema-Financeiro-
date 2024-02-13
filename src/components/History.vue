@@ -1,7 +1,7 @@
 <script setup>
     import { defineProps, ref } from 'vue';
     
-    // const emit = defineEmits(['transaction_delete'])
+    const emit = defineEmits(['transaction_delete'])
 
     const props = defineProps({
         transactions: {
@@ -10,16 +10,18 @@
         }
     });
 
- 
-
     let transactionsCopy = ref(props.transactions.slice()); // Criando uma cópia do array de transações
+
+    const delete_history = (id) =>{
+        emit('transaction_delete', id)
+    }
 
 </script>
 
 <template>
     <h3 class="container">History</h3>
     <section class="container">
-        <div v-for="item in transactionsCopy" :key="item.id" @click="delete_history(item.id)">
+        <div v-for="item in transactions" :key="item.id" @click="delete_history(item.id)">
             <p>{{ item.text }}</p>
             <p>$ {{ item.value }}</p>
             <p :class="item.value < 0 ? 'mines' : 'color'"></p>
