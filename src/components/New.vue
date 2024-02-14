@@ -6,18 +6,19 @@
     const text = ref('')
     const amount = ref('')
     const toast = useToast()
+
     const emit = defineEmits(['newTransaction'])
 
     const newCost = () => {
         if(!text.value || !amount.value){
             toast.error('os campos precisam ser preenchidos !')
         }
-
         
         const data =  {
             text : text.value,
             amount : amount.value
         }
+
         emit('newTransaction', data)
         
         text.value = ''
@@ -27,7 +28,7 @@
 </script>
 
 <template>
- 
+    
     <h3 class="container">Add new transition</h3>
     <form class="container" @submit.prevent="newCost">
         <div class="mb-3 col-5 ">

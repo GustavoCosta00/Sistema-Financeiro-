@@ -18,6 +18,7 @@
 </script>
 
 <template>
+
     <section class="container d-flex justify-content-evenly col-5 flex-wrap">
         <div> 
             <h3>INCOME</h3>
@@ -30,6 +31,7 @@
             <p class="mines">- $ {{ expense }} </p>
         </div>
     </section>
+
 </template>
 
 <style scoped>
@@ -42,7 +44,7 @@
         border-radius: 8px;
     }
 
-.plus{
+    .plus{
         color: rgb(50, 182, 50) ;
     }
 

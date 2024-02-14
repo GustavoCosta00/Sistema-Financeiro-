@@ -11,6 +11,7 @@
 </script>
 
 <template>
+
     <div class="container">
         <h2>
             YOUR BALANCE 
@@ -18,10 +19,10 @@
     
         <p>$ {{ total.total }}</p>
     </div>
+
 </template>
 
 <style scoped>
-
     .container{
         margin-top: 2rem;
     }

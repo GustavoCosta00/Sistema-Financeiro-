@@ -7,7 +7,6 @@
 
   import {ref, computed} from 'vue'
 
-
   const itens = ref( [
         {
             text: 'Sneakers',
@@ -65,15 +64,15 @@
 </script>
 
 <template class="bg-dark-subtle">
+
   <Cabecalho></Cabecalho>
+
   <main>
     <Balance :total="+total" />
     <Costs :expense="-expense" :income="+income" />
     <History :transactions="itens" @transaction_delete="deletar"/>
     <New  @newTransaction="data" />
   </main>
+
 </template>
 
-<style scoped>
-
-</style>
